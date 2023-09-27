@@ -35,6 +35,5 @@ extra-files: [
   ["configure-legacy-install" "sha256=8119eef7ead2a2e4aa8095d0fcd7bc1436f2672e69ac615ab08e25f45fb06bdb"]
 ]
 url {
-src: "https://github.com/ocaml-flambda/flambda-backend/archive/refs/tags/4.14.1-18.tar.gz"
-checksum: "sha256=e58d27feede740d61306ab07f236c38d14cb239706d28ec5f488e49816dce8b8"
-} 
+git: "https://github.com/ocaml-flambda/flambda-backend.git#f32-runtime"
+}
