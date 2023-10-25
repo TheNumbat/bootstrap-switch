@@ -1,4 +1,4 @@
 #! /bin/sh
 
-cd ocaml
-./configure "$@"
+autoconf
+./configure --with-dune=dune --enable-middle-end=flambda2 "$@"

@@ -20,10 +20,6 @@ build: [
   [
     "./configure-legacy-install"
     "--prefix=%{prefix}%"
-    "--docdir=%{doc}%/ocaml"
-    "-C"
-    "CC=cc" {os = "openbsd" | os = "macos"}
-    "ASPP=cc -c" {os = "openbsd" | os = "macos"}
   ]
   [make "-C" "ocaml" "-j%{jobs}%"]
 ]
@@ -31,9 +27,8 @@ available: arch = "x86_64" & os != "windows"
 install: [make "-C" "ocaml" "install"]
 dev-repo: "git+https://github.com/ocaml-flambda/flambda-backend"
 extra-files: [
-  ["ocaml-base-compiler.install" "sha256=3b571b87fffd9bf430b110a732728dcbf6847759f7058291fc81e1ea813cd18d"]
-  ["configure-legacy-install" "sha256=8119eef7ead2a2e4aa8095d0fcd7bc1436f2672e69ac615ab08e25f45fb06bdb"]
+  ["configure-legacy-install" "sha256=5229e3eb88118ea066fdc3eca5a3a14836855d7780734c1e33e37f1c1056f335"]
 ]
 url {
-git: "https://github.com/ocaml-flambda/flambda-backend.git#f32-runtime"
+git: "https://github.com/ocaml-flambda/flambda-backend.git"
 }
