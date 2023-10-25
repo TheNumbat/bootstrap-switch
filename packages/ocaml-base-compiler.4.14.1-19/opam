@@ -21,10 +21,10 @@ build: [
     "./configure-legacy-install"
     "--prefix=%{prefix}%"
   ]
-  [make "-C" "ocaml" "-j%{jobs}%"]
+  [make "-j%{jobs}%"]
 ]
 available: arch = "x86_64" & os != "windows"
-install: [make "-C" "ocaml" "install"]
+install: [make "install"]
 dev-repo: "git+https://github.com/ocaml-flambda/flambda-backend"
 extra-files: [
   ["configure-legacy-install" "sha256=5229e3eb88118ea066fdc3eca5a3a14836855d7780734c1e33e37f1c1056f335"]
